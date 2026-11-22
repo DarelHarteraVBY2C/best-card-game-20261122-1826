@@ -1,0 +1,39 @@
+/* Emberwind Duel — page chrome around the canvas.
+   The game itself is painted on the canvas; this stylesheet only centres
+   it on a dark table-side backdrop and keeps the status line out of sight. */
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #0a1410;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#game {
+  display: block;
+  touch-action: none;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
+  background: #14532d;
+}
+
+/* Read aloud, never shown: the status line screen readers announce. */
+#status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.noscript {
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  text-align: center;
+}
